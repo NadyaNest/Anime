@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Anime Generator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Anime Generator</h1>
+        <div class="form-group">
+            <label for="genre-select">Choose a genre:</label>
+            <select id="genre-select">
+                <option value="all">All</option>
+            </select>
+        </div>
+        <!-- Изображение для кнопки "Get Random Anime" -->
+        <button id="random-button"><img src="{{ url_for('static', filename='random-icon.png') }}" alt="Random Icon"> Get Random Anime</button>
+        <div id="anime-info" class="anime-info"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
